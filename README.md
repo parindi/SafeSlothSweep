@@ -1,30 +1,20 @@
-# Cloud-based-PE-Malware-Detection-API
-Midterm Project for the AI &amp; Cybersecurity Course - University of New Haven
+# SafeSlothSweep API
 
 **Introduction:**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The purpose of this project is to deploying machine learning models for malware classification. This project comprises of three tasks. The initial task is to train a deep neural network to classify PE files as malware or benign using Ember opensource dataset, EMBER-2017 v2. EMBER stands for Endgame Malware Benchmark for Research which is a large dataset composed of labeled and unlabeled samples of parsed features of PE header files from binaries. More details about the dataset is available at https://github.com/endgameinc/ember.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Machine learning models for malware categorization are to be deployed within the framework of this project. There are three tasks in this project. The first aim is to use the Ember open-source dataset, EMBER-2017 v2, to train a deep neural network to categorize PE files as malicious or benign. Endgame Malware Benchmark for Research, or EMBER, is a sizable dataset made up of labeled and unlabeled samples of features extracted from PE header files from binaries. On https://github.com/endgameinc/ember, you may find more information regarding the dataset.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The second task deals with deploying the model to cloud and creating an endpoint (~API) to the model. As a final task, create a client nothing but a python script that loads a PE file and classify it as malicious or benign. For execution of the created client, 'Anaconda3-2020.02-Windows-x86_64.exe' is used as the sample. One can use any PE file, no restrictions.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deploying the model to the cloud and developing an endpoint (API) for the model are the subject of the second task. Create a client consisting just of a Python script that imports a PE file and categorizes it as malicious or benign as the last task. 'Anaconda3-2020.02-Windows-x86_64.exe' is used as the sample to execute the built client. Any PE file may be used; there are no limitations.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The detailed instructions to work on this project are in the [Project Instructions](https://github.com/shreyagopal/Cloud-based-PE-Malware-Detection-API/blob/master/Project%20Instructions.pdf) file.
+[**Task 1: Model Building:**](https://github.com/parindi/SafeSlothSweep/blob/main/AISec_Task%201_Model%20Building.ipynb) 
 
-[**Task 1: Model Building:**](https://github.com/shreyagopal/Cloud-based-PE-Malware-Detection-API/blob/master/AISec_Task%201_Model%20Building.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shreyagopal/Cloud-based-PE-Malware-Detection-API/blob/master/AISec_Task%201_Model%20Building.ipynb)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data is first extracted, vectorized, and preprocessed in this task. Then Keras is used to create a deep neural network architecture. The retrieved data is used to train, validate, and test the model. To improve model performance, hyperparameters are adjusted. The weights of the model are preserved. Finally, a method is developed that takes in a PE file and determines whether it is benign or malicious.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this task, initially, data is extracted, vectorized and preprocessed. Then a deep neural network architecture is designed in Keras. The model is trained, validated and tested on the extracted data. Hyperparameters are tweaked to obtain better model perofrmance. The model and its weights are saved.Lastly a method is created that takes PE file and gives the nature of it i.e., Benign or Malicious.
+[**Task 2: Model Deployment to Cloud:**](https://github.com/parindi/SafeSlothSweep/blob/main/AISec_Task_2_Model_Deployment.ipynb) 
 
-[**Task 2: Model Deployment to Cloud:**](https://github.com/shreyagopal/Cloud-based-PE-Malware-Detection-API/blob/master/AISec_Task_2_Model_Deployment.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shreyagopal/Cloud-based-PE-Malware-Detection-API/blob/master/AISec_Task_2_Model_Deployment.ipynb)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AWS Sagemaker is the cloud service utilized in this project. To deploy the saved model to Sagemaker, it is uploaded and loaded. Thus, an endpoint had been created.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The cloud service used in this task is AWS Sagemaker. The saved model is uploaded and the model is loaded to deploy it to Sagemaker. This created a endpoint.
+[**Task 3: Client Creation:**](https://github.com/parindi/SafeSlothSweep/tree/main/AISec_Task%203_Client%20Creation%20%26%20Execution)
 
-[**Task 3: Client Creation:**](https://github.com/shreyagopal/Cloud-based-PE-Malware-Detection-API/tree/master/AISec_Task%203_Client%20Creation%20%26%20Execution)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to complete this task, a Python program must be written that takes a PE file, transforms it into a feature vector suitable with the model, runs the feature vector via the cloud API, and presents the results (i.e., Malware or Benign, or probability of each).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This task comprises of creating a python code that takes PE file, converts it into a feature vector compatible with the model, runs the vector on the cloud API, and then prints the results (i.e., Malware or Benign – or probabilities of each).
-
-[**Project Report:**](https://github.com/shreyagopal/Cloud-based-PE-Malware-Detection-API/blob/master/AISec_Midterm_Project_Report.pdf) 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The project report has the detailed description about the working and execution of the project along with the explanation of the code. 
-
-**Project Presentation:**
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The presentation video of this project is available @ https://youtu.be/q3hiT-hyi1I
