@@ -1,5 +1,7 @@
 # SafeSlothSweep API
 
+![Logo](https://github.com/parindi/SafeSlothSweep/blob/main/Logo.png)
+
 **Introduction:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Machine learning models for malware categorization are to be deployed within the framework of this project. There are three tasks in this project. The first aim is to use the Ember open-source dataset, EMBER-2017 v2, to train a deep neural network to categorize PE files as malicious or benign. Endgame Malware Benchmark for Research, or EMBER, is a sizable dataset made up of labeled and unlabeled samples of features extracted from PE header files from binaries. On https://github.com/endgameinc/ember, you may find more information regarding the dataset.
